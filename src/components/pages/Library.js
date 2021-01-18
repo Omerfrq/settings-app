@@ -18,6 +18,7 @@ const tableArr = [
 
 export default function Library() {
   const [selectedItems, setSelectedItems] = useState([]);
+  const [sortOrder, setSortOrder] = useState('asc');
 
   const removeItems = (label) => {
     const filtered = selectedItems.filter((value) => value.label !== label);
@@ -76,10 +77,15 @@ export default function Library() {
         <Table bordered hover className='small border-0'>
           <thead className='small'>
             <tr>
-              <th className='border-0 active'>
-                <div>
+              <th
+                onClick={() => setSortOrder((prev) => !prev)}
+                className='border-0 active'
+              >
+                <div className='d-flex  align-items-center'>
                   <span>Date Added</span>
-                  <span className='arrow down ml-1 mb-1'></span>
+                  <span
+                    className={`arrow ${sortOrder ? 'down' : 'up'} ml-1  mb-1`}
+                  ></span>
                 </div>
               </th>
               <th className='border-0'>Display Title</th>
