@@ -1,5 +1,6 @@
 import { Pagination, Table } from 'react-bootstrap';
 import { SelectCustom } from '../select/SelectCustom';
+import { useState } from 'react';
 
 const searchFilters = [
   { title: 'Color', name: 'white' },
@@ -16,11 +17,21 @@ const tableArr = [
 ];
 
 export default function Library() {
+  const [selectedItems, setSelectedItems] = useState([]);
+
+  const removeItems = (label) => {
+    const filtered = selectedItems.filter((value) => value.label !== label);
+    setSelectedItems(filtered);
+  };
+
   return (
     <div className='panel-content h-100 d-flex flex-column'>
       <div className='row'>
         <div className='col-12 col-md-8 mb-3 mb-md-0'>
-          <SelectCustom />
+          <SelectCustom
+            selectedItems={selectedItems}
+            setSelectedItems={setSelectedItems}
+          />
         </div>
         <div className='col-6 col-md-2'>
           <button type='button' className='btn btn-primary btn-block'>
@@ -41,15 +52,20 @@ export default function Library() {
       <div className='small mt-3'>
         <small>Search filters:</small>
         <div className='row mx-0 mt-2'>
-          {searchFilters.map((value) => (
+          {selectedItems.map((value) => (
             <button className='btn btn-light px-2 py-0 mr-1 mb-1'>
               <div className='d-flex align-items-center text-muted'>
                 <span className='small'>
                   <small className='font-weight-bold text-capitalize'>
-                    {value.title}: {value.name}
+                    {value.label}: {value.value}
                   </small>
                 </span>
-                <span className='ml-2 h5 mb-0'>&times;</span>
+                <span
+                  onClick={() => removeItems(value.label)}
+                  className='ml-2 h5 mb-0'
+                >
+                  &times;
+                </span>
               </div>
             </button>
           ))}
