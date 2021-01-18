@@ -1,0 +1,7 @@
+main {
+  display: -ms-grid !important;
+  display: grid !important;
+  -ms-grid-columns: (1fr) [16];
+  grid-template-columns: repeat(16, 1fr);
+  border-top: 1px solid #dadada;
+}

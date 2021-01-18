@@ -1,0 +1,239 @@
+header .logo {
+  margin: 17px 9px;
+  width: 206px;
+}
+
+header .logo img {
+  width: 100%;
+  max-width: 206px;
+}
+
+@media screen and (max-width: 650px) {
+  header .logo {
+    margin: 17px 0px;
+    width: 180px;
+  }
+  header .logo img {
+    width: 100%;
+    max-width: 180px;
+  }
+}
+
+header .profile-section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 81px 180px 120px;
+      grid-template-columns: 81px 180px 120px;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  height: 100%;
+}
+
+header .profile-section .notification {
+  margin: auto 0;
+  text-align: right;
+}
+
+header .profile-section .notification .dropdown .icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+  padding: 0;
+}
+
+header .profile-section .notification .dropdown .icon button {
+  padding: 0;
+}
+
+header .profile-section .notification .dropdown .icon button .count {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  background: #ff3832;
+  border-radius: 100px;
+  height: 13px;
+  width: 13px;
+}
+
+header .profile-section .notification .dropdown .icon button .count p {
+  font-family: "Open Sans Regular";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 14px;
+  text-align: center;
+  color: #f3f5f7;
+}
+
+header .profile-section .notification .dropdown .icon img {
+  max-width: 25px;
+  margin: auto;
+  width: 100%;
+}
+
+header .profile-section .notification .dropdown .icon:hover, header .profile-section .notification .dropdown .icon.active {
+  background: #eeeeee;
+}
+
+header .profile-section .notification .dropdown .ahm_dropdown {
+  background: #eeeeee;
+  border-radius: 10px;
+  border: none;
+}
+
+header .profile-section .notification .dropdown .ahm_dropdown a {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40px 153px 45px;
+      grid-template-columns: 40px 153px 45px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Open Sans Regular";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  padding: 10px 15px;
+  width: 100%;
+  height: 100%;
+  color: #333333;
+  white-space: unset;
+}
+
+header .profile-section .notification .dropdown .ahm_dropdown a .new {
+  width: 12px;
+  height: 12px;
+  margin-right: 0;
+  background: #ff3832;
+  border-radius: 100px;
+}
+
+header .profile-section .notification .dropdown .ahm_dropdown a .info {
+  text-align: right;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+}
+
+header .profile-section .notification .dropdown .ahm_dropdown a .info span {
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 600;
+  color: #666666;
+}
+
+header .profile-section .notification .dropdown .ahm_dropdown a:hover {
+  background: #cccccc;
+}
+
+header .profile-section .notification .dropdown .dropdown-toggle::after {
+  display: none;
+}
+
+header .profile-section .button-1 {
+  margin: auto 0;
+  text-align: right;
+}
+
+header .profile-section .button-1 button {
+  width: 100%;
+  max-width: 180px;
+  height: 45px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(18.85%, #1473e6), to(#0060d3));
+  background: linear-gradient(180deg, #1473e6 18.85%, #0060d3 100%);
+  border: 1px solid #dddddd;
+  color: white;
+  border-radius: 10px;
+  font-family: "Open Sans Semi Bold";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  color: #ffffff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .profile-section .profile-picture {
+  margin: auto 0;
+  text-align: right;
+}
+
+header .profile-section .profile-picture .dropdown button {
+  border: none;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  margin: auto;
+}
+
+header .profile-section .profile-picture .dropdown button img {
+  width: 100%;
+  max-width: 45px;
+}
+
+header .profile-section .profile-picture .dropdown button::after {
+  display: none;
+}
+
+header .profile-section .profile-picture .dropdown .ahm_dropdown {
+  background: #eeeeee;
+  border-radius: 10px;
+  border: none;
+}
+
+header .profile-section .profile-picture .dropdown .ahm_dropdown a {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Open Sans Regular";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  padding: 10px 23px;
+  max-width: 162px;
+  width: 100%;
+  height: 100%;
+  color: #333333;
+}
+
+header .profile-section .profile-picture .dropdown .ahm_dropdown a:last-child {
+  border-top: 1px solid #dadada;
+  margin-top: 8px;
+}
+
+header .profile-section .profile-picture .dropdown .ahm_dropdown a:hover {
+  background: #cccccc;
+}
+
+@media screen and (max-width: 650px) {
+  header .profile-section {
+    -ms-grid-columns: 60px 140px 60px;
+        grid-template-columns: 60px 140px 60px;
+  }
+  header .profile-section .notification .dropdown .icon {
+    width: 41px;
+    height: 41px;
+  }
+  header .profile-section .button-1 button {
+    max-width: 140px;
+    height: 38px;
+    font-size: 16px;
+  }
+  header .profile-section .profile-picture .dropdown button {
+    margin-right: 0;
+  }
+  header .profile-section .profile-picture .dropdown button img {
+    max-width: 38px;
+  }
+}

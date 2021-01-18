@@ -1,0 +1,220 @@
+.tag-content {
+  padding-top: calc(35px + 1rem);
+}
+
+.tag-content .input-area {
+  padding: 0 20px;
+}
+
+.tag-content .input-area h5 {
+  font-family: "Open Sans Regular";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 14px;
+  padding-bottom: 9px;
+  color: #222222;
+}
+
+.tag-content .input-area .input-field {
+  border: 1px solid #979797;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 42px auto;
+      grid-template-columns: 42px auto;
+}
+
+.tag-content .input-area .input-field img {
+  padding: 9px 12px;
+}
+
+.tag-content .input-area .input-field input {
+  font-family: "Open Sans Regular";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  border: none;
+  width: 100%;
+  background-color: transparent;
+  color: #222222;
+}
+
+.tag-content .input-area p {
+  margin-top: 20px;
+  font-family: "Open Sans Regular";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #222222;
+}
+
+.tag-content .result-area {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+.tag-content .result-area .gallery-controls {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  padding: 0 20px;
+}
+
+.tag-content .result-area .gallery-controls .sort-action {
+  text-align: left;
+}
+
+.tag-content .result-area .gallery-controls .sort-action ul {
+  margin: 0;
+}
+
+.tag-content .result-area .gallery-controls .sort-action ul li {
+  display: inline;
+  margin-right: 25px;
+  font-family: "Open Sans Regular";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 35px;
+  color: #1473e6;
+  cursor: pointer;
+}
+
+.tag-content .result-area .gallery-controls .sort-action ul li.active {
+  font-weight: bold;
+}
+
+.tag-content .result-area .gallery-controls .sort-action ul li.active::after {
+  content: "\005E";
+  margin-left: 5px;
+  display: inline-block;
+  position: absolute;
+  -webkit-transform: rotate(180deg) scaleX(1.5);
+          transform: rotate(180deg) scaleX(1.5);
+}
+
+.tag-content .result-area .gallery-controls .sort-action ul li.up::after {
+  -webkit-transform: rotate(0deg) scaleX(1.5);
+          transform: rotate(0deg) scaleX(1.5);
+  margin-top: 3px;
+}
+
+.tag-content .result-area .gallery-controls .sort-action ul li:hover {
+  font-weight: bold;
+}
+
+.tag-content .result-area .gallery-controls .sort-action ul li span {
+  font-family: "Open Sans Regular";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 35px;
+  color: #222222;
+}
+
+.tag-content .result-area .gallery-controls .zoom-control {
+  text-align: right;
+}
+
+.tag-content .result-area .gallery-controls .zoom-control ul {
+  margin: 0;
+}
+
+.tag-content .result-area .gallery-controls .zoom-control ul li {
+  display: inline;
+  margin-left: 7px;
+}
+
+.tag-content .result-area .gallery-controls .zoom-control ul li img {
+  cursor: pointer;
+}
+
+.tag-content .result-area .gallery-controls .zoom-control ul li img.disabled {
+  -webkit-filter: brightness(1.5);
+          filter: brightness(1.5);
+}
+
+.tag-content .result-area .separator {
+  border-top: 1px solid #dadada;
+}
+
+.tag-content .result-area .gallery {
+  padding: 0 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 14px;
+  padding-top: 14px;
+  max-height: calc(100vh - 330px);
+  overflow-y: scroll;
+}
+
+.tag-content .result-area .gallery .gallery-item {
+  position: relative;
+}
+
+.tag-content .result-area .gallery .gallery-item a {
+  height: 100%;
+}
+
+.tag-content .result-area .gallery .gallery-item a .tag-count {
+  position: absolute;
+  bottom: 15px;
+  left: 0px;
+  background: rgba(46, 46, 46, 0.9);
+  width: 62px;
+  height: 38px;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.tag-content .result-area .gallery .gallery-item a .tag-count img {
+  margin-right: 5px;
+  width: 19px;
+}
+
+.tag-content .result-area .gallery .gallery-item a .tag-count span {
+  font-family: "Open Sans Regular";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #f3f5f7;
+}
+
+.tag-content .result-area .gallery .gallery-item a img {
+  width: 100%;
+  cursor: pointer;
+}
+
+.tag-content .result-area .gallery .gallery-item:hover a .tag-count {
+  opacity: 1;
+  left: 15px;
+}

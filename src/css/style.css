@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans Regular', Arial, Helvetica, sans-serif;
+  outline: none;
+}
+
+*.align-right {
+  text-align: right;
+}
+
+.table td,
+.table th {
+  padding: 0.75rem 0px;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'Open Sans Bold';
+  src: url('../fonts/OpenSans-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Open Sans Semi Bold';
+  src: url('../fonts/OpenSans-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'Open Sans Regular';
+  src: url('../fonts/OpenSans-Regular.ttf');
+}
+
+.window-size-error {
+  padding: 20px;
+  height: 100vh;
+  width: 100vw;
+  display: -ms-grid;
+  display: grid;
+}
+
+.window-size-error .message {
+  margin: auto;
+}
+
+.window-size-error .message .logo {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.window-size-error .message .logo img {
+  width: 100%;
+  max-width: 206px;
+}
+
+.window-size-error .message p {
+  text-align: center;
+  font-family: 'Open Sans Semi Bold';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #222222;
+}
+
+.btn {
+  border-radius: 10px;
+  font-family: 'Open Sans Semi Bold';
+  font-size: 14px;
+}
+
+.btn.focus,
+.btn:focus {
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+.badge-danger {
+  color: #fff;
+  background-color: #ff5757;
+}
+
+.btn-light {
+  background-color: #eeeeee;
+}
+
+.btn-light:hover {
+  background-color: #cccccc;
+}
+
+.btn-primary {
+  background: linear-gradient(180deg, #1473e6 18.85%, #0060d3 100%);
+  border: 1px solid #dddddd;
+  color: white;
+  border-radius: 10px;
+  font-family: 'Open Sans Semi Bold';
+  font-size: 14px;
+}
+
+.text-underline:hover,
+.text-underline.active {
+  text-decoration: underline;
+}
+
+textarea {
+  font-size: 0.8rem !important;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.react-select-container *:active {
+  background-color: #cccccc;
+}
+
+* ::-webkit-scrollbar {
+  width: 7px;
+}
+
+* ::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+* ::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+  border-radius: 105px;
+}
+
+* ::-webkit-scrollbar-thumb:hover {
+  background: #747474;
+}
+
+/* == */
+
+.arrow {
+  border: solid #222222;
+  border-width: 0 1.5px 1.5px 0;
+  display: inline-block;
+  padding: 1.5px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+/* == */
+
+.page-link {
+  background-color: #eeeeee;
+  color: #000;
+}
+
+.page-link:hover,
+.page-item.active .page-link {
+  color: #000;
+  background-color: #cccccc;
+  border-color: #eeeeee;
+}
+
+.pagination-sm .page-item:first-child .page-link {
+  border-top-left-radius: 0.6rem;
+  border-bottom-left-radius: 0.6rem;
+}
+
+.pagination-sm .page-item:last-child .page-link {
+  border-top-right-radius: 0.6rem;
+  border-bottom-right-radius: 0.6rem;
+}
+
+/* == */
+
+.nav-pills-2 {
+  color: #1473e6;
+}
+
+.nav-pills-2 .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #0060d3;
+  border-bottom: 2px solid #0060d3;
+}
+
+/* == */
+
+.custom-switch {
+  padding-left: 3.25rem;
+}
+
+.custom-switch .custom-control-label::before {
+  height: 1.2rem;
+  width: 2.6rem;
+  top: 0;
+  left: -3.25rem;
+}
+
+.custom-switch .custom-control-label::after {
+  height: calc(1rem - 2.5px);
+  top: 3px;
+  left: calc(-3.2rem + 2px);
+}
+
+.custom-switch .custom-control-input:checked ~ .custom-control-label::after {
+  background-color: #00d94e;
+  transform: translateX(1.4rem);
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  color: #fff;
+  border: 2px solid #00d94e;
+  background-color: unset;
+  left: -3.25rem;
+}
+
+/* -- */
+
+thead th {
+  color: #8b7d7d;
+}
+
+thead th:hover {
+  opacity: 0.9;
+}
+
+thead th:hover,
+thead th.active {
+  color: #000;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 575px) {
+  .h5,
+  h5 {
+    font-size: 0.7rem;
+  }
+}
