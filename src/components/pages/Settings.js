@@ -1,6 +1,10 @@
 import { Col, Nav, Row, Tab } from 'react-bootstrap';
 import { Application } from './tabSettings/Application';
+import { Billing } from './tabSettings/Billing';
+import { Integrations } from './tabSettings/Integrations';
+import { Notifications } from './tabSettings/Notifications';
 import { Password } from './tabSettings/Password';
+import { Profile } from './tabSettings/Profile';
 
 export default function Settings() {
   return (
@@ -36,13 +40,21 @@ export default function Settings() {
               <Tab.Pane eventKey='application'>
                 <Application />
               </Tab.Pane>
-              <Tab.Pane eventKey='profile'>Profile</Tab.Pane>
-              <Tab.Pane eventKey='integrations'>Integrations</Tab.Pane>
+              <Tab.Pane eventKey='profile'>
+                <Profile />
+              </Tab.Pane>
+              <Tab.Pane eventKey='integrations'>
+                <Integrations />
+              </Tab.Pane>
               <Tab.Pane eventKey='password'>
                 <Password />
               </Tab.Pane>
-              <Tab.Pane eventKey='billing'>Billing</Tab.Pane>
-              <Tab.Pane eventKey='notifications'>Notifications</Tab.Pane>
+              <Tab.Pane eventKey='billing'>
+                <Billing />
+              </Tab.Pane>
+              <Tab.Pane eventKey='notifications'>
+                <Notifications />
+              </Tab.Pane>
             </Tab.Content>
           </Col>
         </Row>
