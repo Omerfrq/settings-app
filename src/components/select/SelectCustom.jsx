@@ -81,7 +81,7 @@ export const SelectCustom = React.memo(
           state.isFocused && !state.isSelected
             ? '#eee'
             : state.isSelected
-            ? '#dae0e5'
+            ? '#eee'
             : '#eee',
         padding: 0,
       }),
