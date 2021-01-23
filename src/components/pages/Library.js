@@ -18,7 +18,23 @@ const tableArr = [
 
 export default function Library() {
   const [selectedItems, setSelectedItems] = useState([]);
+  const [sortTitle, setSortTitle] = useState('asc');
+  const [sortPrice, setSortPrice] = useState('asc');
   const [sortOrder, setSortOrder] = useState('asc');
+  const [sortUrl, setSortUrl] = useState('asc');
+  const [sortContentUrl, setContentUrl] = useState('asc');
+
+  const [status, setStatus] = useState('badge-success rounded-circle');
+
+  const changeColor = () => {
+    if (status === 'badge-success rounded-circle') {
+      setStatus('badge-danger rounded-circle');
+    } else if (status === 'badge-danger rounded-circle') {
+      setStatus('rounded-0 btn-light active');
+    } else if ('rounded-0 btn-light active') {
+      setStatus('badge-success rounded-circle');
+    }
+  };
 
   const removeItems = (label) => {
     const filtered = selectedItems.filter((value) => value.label !== label);
@@ -79,7 +95,7 @@ export default function Library() {
             <tr>
               <th
                 onClick={() => setSortOrder((prev) => !prev)}
-                className='border-0 active'
+                className='border-0 '
               >
                 <div className='d-flex  align-items-center'>
                   <span>Date Added</span>
@@ -88,10 +104,52 @@ export default function Library() {
                   ></span>
                 </div>
               </th>
-              <th className='border-0'>Display Title</th>
-              <th className='border-0'>Price</th>
-              <th className='border-0'>Destination URL</th>
-              <th className='border-0'>Content URL</th>
+              <th
+                onClick={() => setSortTitle((prev) => !prev)}
+                className='border-0'
+              >
+                <div className='d-flex  align-items-center'>
+                  <span>Date Title</span>
+                  <span
+                    className={`arrow ${sortTitle ? 'down' : 'up'} ml-1  mb-1`}
+                  ></span>
+                </div>
+              </th>
+              <th
+                onClick={() => setSortPrice((prev) => !prev)}
+                className='border-0'
+              >
+                <div className='d-flex  align-items-center'>
+                  <span>Price</span>
+                  <span
+                    className={`arrow ${sortPrice ? 'down' : 'up'} ml-1  mb-1`}
+                  ></span>
+                </div>
+              </th>
+              <th
+                onClick={() => setSortUrl((prev) => !prev)}
+                className='border-0'
+              >
+                <div className='d-flex  align-items-center'>
+                  <span>Destination URL</span>
+                  <span
+                    className={`arrow ${sortUrl ? 'down' : 'up'} ml-1  mb-1`}
+                  ></span>
+                </div>
+              </th>
+              <th
+                onClick={() => setContentUrl((prev) => !prev)}
+                className='border-0'
+              >
+                <div className='d-flex  align-items-center'>
+                  <span>Content URL</span>
+                  <span
+                    className={`arrow ${
+                      sortContentUrl ? 'down' : 'up'
+                    } ml-1  mb-1`}
+                  ></span>
+                </div>
+              </th>
               <th className='border-0 pl-0'>Status</th>
             </tr>
           </thead>
@@ -127,7 +185,8 @@ export default function Library() {
                   <div className='d-flex h-100 align-items-center px-2'>
                     <div className='border-right pr-2 h-100 d-flex align-items-center'>
                       <span
-                        className={`badge ${value.status} d-flex`}
+                        onClick={changeColor}
+                        className={`badge ${status} d-flex`}
                         style={{ height: 10, width: 10 }}
                       ></span>
                     </div>
