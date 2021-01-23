@@ -107,6 +107,22 @@ button:focus {
   font-size: 14px;
 }
 
+.border-success {
+  border-color: #00d94e !important;
+}
+
+.border-danger {
+  border-color: #ff5757 !important;
+}
+
+.text-success {
+  color: #00d94e !important;
+}
+
+.text-danger {
+  color: #ff5757 !important;
+}
+
 .text-underline:hover,
 .text-underline.active {
   text-decoration: underline;
@@ -148,6 +164,13 @@ a:hover {
   border-width: 0 1.5px 1.5px 0;
   display: inline-block;
   padding: 1.5px;
+}
+
+.arrow-2 {
+  border: solid transparent;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 2px;
 }
 
 .right {
